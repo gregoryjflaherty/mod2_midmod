@@ -1,0 +1,6 @@
+<h1><%= @actor.name %></h1>
+<li>Age: <%= @actor.age %></li>
+<h3>Actors <%= @actor.name %> has worked with: </h3>
+<% @actor.finds_co_actors.each do |actor| %>
+  <li><%= actor %></li>
+<% end %>

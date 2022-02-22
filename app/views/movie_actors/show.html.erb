@@ -1,0 +1,14 @@
+<h1><%= @movie.title %></h1>
+<p>Creation year: <%= @movie.creation_year %></p>
+<p>Genre: <%= @movie.genre %></p>
+
+<h3> All Actors in <%= @movie.title %> </h3>
+<% @actors.youngest_to_oldest.each_with_index do |actor, idx| %>
+  <section id="actor-<%=idx%>">
+    <li><%= actor.name %> - Age: <%= actor.age %></li>
+  </section>
+<% end %>
+
+<h3>Average Age of All Actors: <%= @actors.average_age %> </h3>
+
+<%= render partial: "add_actor", locals: { movie: @movie } %>

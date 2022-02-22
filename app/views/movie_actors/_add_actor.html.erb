@@ -1,0 +1,7 @@
+
+
+<%= form_with(url: "/movies/#{@movie.id}", method: "post", local: true) do |form| %>
+<%= form.label "Add actor" %>
+<%= form.text_field "Add actor" %>
+<%= form.submit "Add Actor to #{@movie.title}" %><br>
+<% end %>
